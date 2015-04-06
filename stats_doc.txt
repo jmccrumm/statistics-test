@@ -1,0 +1,36 @@
+John McCrummen
+CS 3060
+3/31/15
+Group (Nate & Luke)
+
+
+This document is provided with instructions on how to compile and run stats.cpp
+from the Terminal window. 
+The purpose of this program is to read a file composed of X and Y values associated 
+with a specific label. It essentially reads points on a graph from the file chosen
+by the user, determines the distance each point is from the origin(0,0), and then 
+calculates the mean, variance, skewness, and excess kurtosis of those distances.
+
+Before the program is to be executed, the user must have a file to read from.
+This can be a text-based file of any extension. In the provided example we use data.dat.
+The contents of the file must be as follows:
+    label, x-value, y-value
+    label, x-value, y-value
+    etc...
+"label" in our example is either 1 or -1, which is used to mark which points are within
+a certain radius on the graph.
+
+To compile from Terminal:
+1. Change to directory where stats.cpp is located. (needs to be a folder of which is 
+    inside the 'dlib' directory)
+2. Type the following into the terminal:
+    g++ stats.cpp -o stats.out -I.. ../dlib/all/source.cpp -lpthread -lX11
+3. Type "./stats.out" to run
+4. When it prompts for the file to read from, type in the COMPLETE PATH to the .dat file
+    (or whichever extension you used) and press ENTER
+5. The program will first print out the calculated distances for each of the sample points,
+    then will display the mean, variance, skewness, and excess kurtosis of all the 
+    distances
+
+For best results (and an easier way), run the main executable which includes all the
+necessary functions all-in-one and follow the directions given in the Terminal window.
